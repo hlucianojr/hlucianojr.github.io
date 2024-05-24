@@ -16,7 +16,9 @@
 <body>
 
 <h1>Understanding Internal Developer Platforms</h1>
-<p>Description: Internal Developer Platforms (IDP) are centralized environments that standardize development, operations, and deployment processes within an organization. They aim to streamline workflows and improve productivity by providing a cohesive set of tools and practices.</p>
+<p>Description: Internal Developer Platforms (IDP) are centralized environments that standardize development, operations, and deployment processes within an organization. They aim to streamline workflows and improve productivity by providing a cohesive pre set of tools and governance.  Most company that have implemented DevOps are now having the need to implement some sort of IDP.  This IDP can take the shape of overeload CI/CD tools like Jenkins, Github, homegrown and much more.  However it is clear that we need something better than lipstick over tranditional tools.  For example Jenkins should just be your CI/CD machine and nothing more it should not customize to perform update to operation, monitoring services and it no a service catalog.  Github is great for storing source code, running workflows and collaborating at a distributed level but it is not your service catalog.  It may hold the source code and even the desire status of your Kubernetes cluster but it is not your service catalog.   
+
+</p>
 
 <table class="content-table">
     <thead>
@@ -77,16 +79,49 @@
         </td>
       </tr>
       <tr>
+        <td>
+            IDP vs. Traditional Tools:
+        </td>
+        <td>
+        Jenkins: Jenkins excels as a CI/CD machine but shouldn’t be overloaded with additional responsibilities. It’s not a service catalog or an operations updater.
+        GitHub: While GitHub is excellent for source code management and collaboration, it isn’t a comprehensive service catalog. It lacks features like monitoring services and operational updates.
+        </td>   
+      </tr>
+      <tr>
         <td>4. How does IDP help reduce cognitive load?</td>
-        <td>Understanding how IDPs can simplify decision-making and reduce complexity for developers.</td>
+        <td>IDPs simplify decision-making for developers. By providing a consistent set of tools and practices, they reduce cognitive load, allowing teams to focus on building quality software.</td>
+      </tr>
+      <tr>
+        <td>Why Do We Need IDPs</td>
+        <td>DevOps Complexity: As companies adopt DevOps practices, the tool landscape becomes fragmented. CI/CD tools like Jenkins, GitLab, or GitHub serve specific purposes but lack cohesion.
+            Beyond Lipstick Solutions: IDPs go beyond superficial fixes. Rather than applying “lipstick” to existing tools, they offer a holistic approach to software delivery.</td>
       </tr>
       <tr>
         <td>5. What are the pros and cons of IDP?</td>
-        <td>An objective analysis of the benefits and potential drawbacks of adopting an IDP.</td>
+        <td><h3>Pros and Cons:</h3>
+            Pros:
+            Streamlined workflows
+            Improved collaboration
+            Reduced tool sprawl
+            Enhanced governance
+            Cons:
+            Implementation challenges
+            Adoption across teams
+            Balancing customization and standardization.
+        </td>
       </tr>
       <tr>
         <td>6. Is backstage.io an IDP?</td>
-        <td>An examination of backstage.io and its role as an IDP within the tech industry.</td>
+        <td>
+            Backstage.io, an open-source project by Spotify, aims to be an IDP. It centralizes services, documentation, and workflows, making it a potential solution for managing the entire software lifecycle.
+
+            In summary, IDPs empower organizations to move beyond fragmented tools, fostering collaboration, efficiency, and better software delivery. 🚀
+
+
+        </td>
+      </tr>
+      <tr>
+        
       </tr>
     </tbody>
   </table>
