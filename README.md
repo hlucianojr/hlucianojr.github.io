@@ -23,6 +23,3 @@ AI Agents: Skilled in creating autonomous entities that interact with their envi
 LangChain: Proficient with LangChain, a framework for developing language models that can understand and generate human language. LangChain is instrumental in advancing natural language processing capabilities, enabling more intuitive and effective communication between humans and machines.
 Passion
 I am passionate about helping businesses navigate the complexities of cloud migration and unlock its potential for growth. Additionally, my new training in AI and related technologies empowers me to drive innovation and efficiency in various sectors, making a significant impact on the market.
-
-![image](https://github.com/user-attachments/assets/29f225b6-3074-4863-b7c5-f1dbde1c4e8f)
-
