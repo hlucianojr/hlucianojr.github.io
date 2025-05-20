@@ -1,128 +1,37 @@
-Microsoft Build 2025: Agentic Web and AI Development Shift
-Based on the provided sources from the Microsoft Build 2025 opening keynote, here is a list of announcements and key updates:
-•
-Platform Shifts and Vision: The keynote highlighted the current period as the "middle innings" of another platform shift, moving towards an open scalable agentic web. This shift is about expanding opportunity for developers to build apps and agents to empower people and organizations. The vision for the agentic web includes content and intelligence being more distributed and discoverable.
-•
-Developer Tools and Ecosystem:
-◦
-The Visual Studio family now has over 50 million users, and GitHub has 150 million users.
-◦
-Visual Studio is receiving significant updates, including .NET 10 support, live preview at design time, improvements to Git tooling, and a new debugger for cross-platform apps. Microsoft is moving to a monthly cadence for stable releases for Visual Studio.
-◦
-VS Code recently shipped its 100th release, including improved multi-window support.
-◦
-Microsoft is open sourcing C-Pilot in VS Code, integrating AI-powered capabilities directly into the core open-source repo.
-◦
-GitHub Copilot has evolved significantly, moving from code completions to chat, multi-file edits, and now agents. It has been used by over 15 million developers. Copilot is moving from being a pair programmer to a peer programmer.
-◦
-GitHub Copilot in agent mode is a new capability. It allows assigning issues to Copilot, including bug fixes, new features, and code maintenance, which it will complete autonomously. Agent mode takes Copilot beyond answering questions or suggesting code to helping with the work itself. It uses MCP (Model Context Protocol) to gain context and capabilities from various tools and services. The vision capabilities of Copilot agent mode allow it to understand sketches and design details, like from a Figma design.
-◦
-The Foundry Agent Service is generally available. This service allows developers to build declarative agents with few lines of code for complex workflows, supports multi-agent orchestration, and integrates with frameworks like Semantic Kernel and Autogen. More than 10,000 organizations are already using it.
-◦
-Microsoft announced native support for MCP (Model Context Protocol) in Windows. Windows will include built-in MCP servers for things like file systems, settings, app actions, and windowing. A native MCP registry is also being added to Windows to help MCP-compatible clients discover secure, vetted MCP servers. MCP is being adopted as Microsoft's standard protocol for agentic communication.
-◦
-NL Web was announced, described as being like HTML for the agentic web. NL Web provides a way for anyone with a website or API to easily make it an agent application and leverage the power of large language models. Every NL web endpoint is by default an MCP server, making them accessible to any agent that speaks MCP.
-•
-Agent Building and Deployment:
-◦
-Azure AI Foundry is presented as a first-class platform and app server for building AI applications and agents. It's described as a complete app platform or an "agent factory". Foundry takes more than just a great model, focusing on the system around the model, including eval, orchestration, and RAG. Over 70,000 organizations are already using Foundry.
-◦
-Foundry supports a wide model choice, including over 1,900 models from various providers like OpenAI, Mistral, Llama, Black Forest Labs, and Hugging Face (over 11,000 models available through expanded partnership).
-◦
-Microsoft is sim shipping 15 OpenAI models on Azure this year, offering same-day access when a new model drops, and Sora is coming next week.
-◦
-Grock from XAI is coming to Azure.
-◦
-A new model router is available in Foundry that will automatically choose the best OpenAI model for a given task.
-◦
-Developers can now provision throughput once on Foundry and use it across multiple models, including Grock. Mistral is provisionable with sovereign deployment in the EU region.
-◦
-Improvements are being made to the retrieval system for RAG (Retrieval Augmented Generation) apps, aiming for a more sophisticated approach than just vector search and embeddings, requiring a knowledge engine or query engine built for agents. Cosmos DB is integrated directly into Foundry, allowing agents to store conversational history and soon be used for RAG needs. Azure Data Bricks is also connecting data to Foundry.
-◦
-The ability to connect Foundry to Azure container apps or functions is made straightforward, allowing deployment of any open-source model into AKS, whether in the cloud, hybrid, or at the edge.
-◦
-The loop between Foundry and Copilot Studio is being closed, allowing models fine-tuned or post-trained in Foundry to be used to automate workflows or build agents in Copilot Studio.
-◦
-New observability features are coming to Foundry to help monitor and manage AI in production, tracking impact, quality, safety, and cost.
-◦
-Entra ID agents were announced, providing agents with their own identity, permissions, policies, and access controls. Agents built in Foundry and Copilot Studio automatically show up in an agent directory in Entra. Microsoft is partnering with Service Now and Workday to bring automated provisioning and management to their agents via Entra.
-◦
-Purview now integrates with Foundry to ensure end-to-end data protection for agents.
-◦
-Defender now integrates with Foundry to protect agents from threats like wallet abuse or credential theft.
-◦
-Foundry Local was announced, bringing the power of the app server and building capability to the edge and clients. Foundry Local includes a runtime, models, agents as a service, and a CLI for local development, fully supported on Windows and Mac.
-◦
-The Healthcare Agent Orchestrator, used by Stanford Medicine to streamline tumor board preparations, is now available to everyone in Foundry.
-•
-Microsoft 365 and Productivity:
-◦
-The latest update to Microsoft 365 Copilot is now generally available. This update integrates chat, search, notebooks, create, and agents.
-◦
-M365 Copilot features include grounding on both web data and work data, search capability across various applications (including non-M365 apps like Confluence, Google Drive, Jira, Service Now), notebooks for collecting heterogeneous data, and create features for generating videos or images.
-◦
-Specialized agents within M365 Copilot include the Researcher agent (synthesizing web and enterprise sources with deep chain of thought reasoning) and the Analyst agent (deriving insights, forecasts, and visualizations from raw data across multiple files).
-◦
-Teams enables agents to be multiplayer and allows agents to show up within Teams and Copilot.
-◦
-The Teams AI Library now supports MCP, and enabling A2A (Agent-to-Agent) communication is possible with just one line of code.
-◦
-Developers can publish their agents to the agent store for discovery and distribution across both Copilot and Teams, providing access to hundreds of millions of users.
-◦
-Copilot Studio has shipped a ton of new features, including a full KUA agent, MCP agent flows, and the ability to mix and match LLMs with deterministic workflows.
-◦
-Multi-agent orchestration is now available in Copilot Studio, allowing complex workflows involving multiple specialized agents to collaborate (e.g., onboarding a new hire).
-◦
-Copilot Tuning is being introduced, allowing enterprises to build a new class of agents using models fine-tuned on their specific company data, workflows, and style. This is a low-code way to achieve what would typically require a team of data scientists.
-◦
-Copilot in PowerBI is coming, enabling users to chat with their data, visually explore, and analyze it across reports and semantic models. This agent will also be available in Microsoft 365 Copilot.
-•
+Microsoft Build 2025: A Senior Architect’s Perspective on the Agentic Web and the AI Revolution
+As a Senior Solution Architect with over 26 years navigating waves of technological change, I can say with conviction: we are standing at the threshold of the most profound transformation our industry has ever seen. Artificial Intelligence isn’t just another tool or framework—it’s the catalyst for a new era, one that promises to fundamentally redefine how we work, create, and innovate.
+
+The Platform Shift: From Tools to Intelligence
+In the past, each new programming language or development framework brought shifts in how we solved problems and built products. Those days, while important, now feel incremental in hindsight compared to the leap we’re witnessing. AI is no longer simply an accelerator—it’s becoming the canvas and the brush, transforming creativity into the primary force behind software development.
+
+The announcements at Microsoft Build 2025 confirm what many seasoned technologists already sense: AI will soon dominate every coding language and framework. Rather than adapting to the latest syntax or chasing after the “next big thing” in development paradigms, we’re moving toward a landscape where AI seamlessly integrates across stacks, acting as a creative partner rather than a passive tool. Redundant frameworks will inevitably consolidate, and the real differentiator will be our ability to imagine and orchestrate solutions—letting AI bring those visions to life.
+
+Key Announcements: Architecting for the Agentic Future
+AI as the New Developer Core:
+With the Visual Studio family surpassing 50 million users and GitHub at 150 million, Microsoft is layering AI deeply into the developer experience. Copilot’s evolution—from code completion to chat, multi-file edits, and autonomous agents—signals a shift: developers will soon delegate entire features, bug fixes, and maintenance tasks to AI-driven agents.
+
+Declarative Agent Building:
+The Foundry Agent Service and AI Foundry platforms make it possible to build and orchestrate powerful agents with minimal code. This isn’t just about productivity—it’s about enabling creativity to take center stage, as AI handles the heavy lifting across model choices, infrastructure, and deployment.
+
+Unified Model Ecosystem:
+With support for thousands of models—OpenAI, Mistral, Llama, and more—alongside native integration with Azure, the barriers to implementing advanced AI are disappearing. Model routing, sovereign deployments, and same-day access to the latest innovations mean architects and developers can focus on outcomes, not plumbing.
+
+Agentic Web and NL Web:
+The introduction of NL Web, described as “HTML for the agentic web,” democratizes the creation of AI-powered applications. Anyone with a website or API can now harness the power of large language models and agent-based workflows.
+
+Productivity Reinvented:
+Microsoft 365 Copilot, Teams AI Library, and Copilot Studio are reshaping how organizations operate. Multi-agent orchestration, low-code agent building, and AI-driven insights are becoming the norm. The fusion of enterprise data, AI, and specialized agents will unlock new levels of productivity and creativity.
+
 Data and Infrastructure:
-◦
-SQL Server 2025 is launching.
-◦
-The data layer and intelligence are being brought closer.
-◦
-Cosmos DB is integrated directly into Foundry.
-◦
-Azure Data Bricks is connecting data to Foundry.
-◦
-In Postgress SQL queries, LLM responses can now be directly integrated, mixing natural language and SQL.
-◦
-Cosmos DB is being brought to Fabric, allowing unification of entire data estates for AI readiness.
-◦
-A digital twin builder is being built into Fabric with no-code/low-code capabilities.
-◦
-Shortcut transformations are available in One Lake, providing AI-driven ETL with pre-built transformations like audio to text or sentiment analysis powered by Foundry.
-◦
-Azure is the first cloud to bring Nvidia GB200s online at scale.
-◦
-Azure leads in performance from a single GB200 with NVLink 72 rack, achieving 865,000 tokens per second.
-◦
-Azure continues to expand its global footprint, with over 70 data center regions and 10 opened in the past 3 months.
-◦
-Microsoft is building a complete AI system, including cooling solutions like the Maya sidekick liquid cooling unit that supports GB200.
-◦
-New data centers feature significant increases in fiber optics and the AI WAN 400 terabyte backbone to connect the distributed infrastructure.
-◦
-Cobalt ARM-based VMs are powering various workloads, including Teams and Defender.
-•
-Windows and Local Development:
-◦
-Foundry Local was announced, bringing the Foundry platform capabilities (runtime, models, agents as a service, CLI) to the edge and clients, with full support on Windows and Mac.
-◦
-The Windows AI Foundry was announced as a platform for the full AI development life cycle, supporting CPUs, GPUs, NPUs, and the cloud, with built-in Foundry local.
-◦
-Windows AI Foundry allows customizing the built-in Five Silica SLM using Laura adapters.
-◦
-Native support for MCP in Windows was announced, including built-in MCP servers and a native MCP registry.
-◦
-WSL (Windows Subsystem for Linux) is now fully open source.
-•
-Science and Discovery:
-◦
-Microsoft Discovery was announced as a platform for science and the scientific workflow, specifically R&D. It's built on a powerful graph-based knowledge engine (graph RAG) that understands nuanced scientific knowledge.
-◦
-Discovery uses advanced agents highly specialized in R&D, not just for reasoning but for conducting research itself in a continuous iterative cycle (generating candidates, simulating, learning).
-◦
-It integrates with HPC (High-Performance Computing) resources in Azure and will integrate advances in quantum computing in the future
+With SQL Server 2025, Cosmos DB, Azure Databricks, and Fabric’s digital twin builder, the data layer is being tightly woven into the fabric of AI solutions. Azure’s scale and performance—powered by cutting-edge hardware and global reach—further remove barriers to innovation.
+
+Windows and Edge AI:
+Foundry Local and the Windows AI Foundry bring the power of AI and agentic workflows to the edge, supporting a full spectrum of hardware and deployment scenarios. WSL going fully open source underscores Microsoft’s commitment to openness and community-driven progress.
+
+The Road Ahead: Creativity Unleashed
+Having witnessed the impact of past paradigm shifts—from client/server to the cloud—I see AI as a force multiplier unlike any before it. No longer will progress hinge on mastering new languages or frameworks. Instead, the future belongs to those who can envision solutions, articulate problems, and harness AI as a creative partner.
+
+In this new era, creativity takes the driver’s seat. AI becomes the brush with which we paint the future. The boundaries between idea and implementation will blur, empowering architects, developers, and creators to solve problems with unprecedented speed and imagination.
+
+The revolution isn’t coming—it’s here. And for those of us who have spent decades shaping technology, there has never been a more exciting time to build, create, and dream.
+
