@@ -32,3 +32,8 @@ I am passionate about helping businesses navigate the complexities of cloud migr
 ### Passion
 
 I am passionate about helping businesses navigate the complexities of cloud migration and unlock its potential for growth. Additionally, my new training in AI and related technologies empowers me to deliver cutting-edge solutions.
+
+## Blog Posts
+
+- [Introducing Google ADK for Intelligent AI Agents](blog/en/Introducing_Google_ADK_for_Intelligent_AI_Agents.md)
+- [Microsoft Build 2025: The Agentic Web and the AI Development Shift](blog/en/Microsoft_Build_2025_Agentic_Web_and_AI_DevelopmentShift.html)
