@@ -1,0 +1,135 @@
+/* General Reset & Body Styling */
+body {
+    font-family: Arial, sans-serif; /* Using Arial as a common sans-serif font */
+    margin: 0;
+    padding: 0;
+    background-color: #f0f0f0; /* Light gray background */
+    color: #333; /* Dark gray text */
+    line-height: 1.6;
+}
+
+/* Header Styling */
+header {
+    background-color: #333; /* Dark gray header background */
+    color: white;
+    padding: 1em 2%; /* Use percentage for some horizontal padding */
+    display: flex; /* Using flexbox for alignment */
+    justify-content: space-between; /* Space between logo and nav */
+    align-items: center; /* Vertically align items in the center */
+}
+
+.logo {
+    font-size: 1.5em;
+    font-weight: bold;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0; /* Remove default margin */
+    display: flex; /* Align nav items in a row */
+}
+
+nav ul li {
+    margin-left: 20px; /* Space between nav items */
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+nav ul li a:hover {
+    text-decoration: underline;
+}
+
+/* Main Content Styling */
+main {
+    max-width: 900px; /* Slightly wider for better content flow */
+    margin: 30px auto; /* More top/bottom margin */
+    padding: 25px;
+    background-color: white;
+    box-shadow: 0 2px 15px rgba(0,0,0,0.1); /* Slightly more pronounced shadow */
+    border-radius: 8px; /* Rounded corners for the main content block */
+}
+
+/* Hero Section Styling */
+.hero {
+    text-align: center;
+    padding: 20px 0;
+    border-bottom: 1px solid #eee; /* Separator line */
+    margin-bottom: 30px;
+}
+
+.hero h1 {
+    font-size: 2.2em; /* Larger hero title */
+    color: #333; /* Match main text color or a specific brand color */
+    margin-bottom: 0.5em;
+}
+
+/* General Section Styling */
+section {
+    margin-bottom: 25px;
+    padding-bottom: 25px;
+    border-bottom: 1px solid #f0f0f0; /* Lighter separator for sections */
+}
+
+section:last-child {
+    border-bottom: none; /* No border for the last section */
+    margin-bottom: 0;
+    padding-bottom: 0;
+}
+
+h2 {
+    font-size: 1.8em;
+    color: #0056b3; /* Darker blue for H2 headings */
+    margin-bottom: 0.75em;
+}
+
+h3 {
+    font-size: 1.4em;
+    color: #333;
+    margin-top: 1em;
+    margin-bottom: 0.5em;
+}
+
+p, ul {
+    margin-bottom: 1em;
+}
+
+ul {
+    padding-left: 20px; /* Standard indentation for lists */
+}
+
+li {
+    margin-bottom: 0.5em;
+}
+
+strong { /* Bolding for emphasis like in the original */
+    font-weight: bold;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: block; /* Center image if it has margin auto */
+    margin: 1.5em auto; /* Add some space around the image */
+    border-radius: 4px; /* Slight rounding for images */
+}
+
+/* Footer Styling */
+footer {
+    text-align: center;
+    padding: 1.5em 0;
+    background-color: #333; /* Match header background */
+    color: white;
+    margin-top: 30px;
+    font-size: 0.9em;
+}
+
+/* Accessibility: Focus outline for keyboard navigation */
+a:focus, button:focus {
+    outline: 2px solid #0056b3;
+    outline-offset: 2px;
+}
