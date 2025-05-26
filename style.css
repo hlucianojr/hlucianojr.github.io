@@ -3,15 +3,15 @@ body {
     font-family: Arial, sans-serif; /* Using Arial as a common sans-serif font */
     margin: 0;
     padding: 0;
-    background-color: #f0f0f0; /* Light gray background */
-    color: #333; /* Dark gray text */
+    background-color: #121212; /* Dark gray background */
+    color: #e0e0e0; /* Light gray text */
     line-height: 1.6;
 }
 
 /* Header Styling */
 header {
-    background-color: #333; /* Dark gray header background */
-    color: white;
+    background-color: #1f1f1f; /* Darker gray header background */
+    color: #e0e0e0;
     padding: 1em 2%; /* Use percentage for some horizontal padding */
     display: flex; /* Using flexbox for alignment */
     justify-content: space-between; /* Space between logo and nav */
@@ -35,12 +35,13 @@ nav ul li {
 }
 
 nav ul li a {
-    color: white;
+    color: #e0e0e0;
     text-decoration: none;
     font-weight: bold;
 }
 
 nav ul li a:hover {
+    color: #90caf9;
     text-decoration: underline;
 }
 
@@ -49,8 +50,8 @@ main {
     max-width: 900px; /* Slightly wider for better content flow */
     margin: 30px auto; /* More top/bottom margin */
     padding: 25px;
-    background-color: white;
-    box-shadow: 0 2px 15px rgba(0,0,0,0.1); /* Slightly more pronounced shadow */
+    background-color: #2a2a2a; /* Dark card background */
+    border: 1px solid #3a3a3a; /* Dark border instead of shadow */
     border-radius: 8px; /* Rounded corners for the main content block */
 }
 
@@ -58,13 +59,13 @@ main {
 .hero {
     text-align: center;
     padding: 20px 0;
-    border-bottom: 1px solid #eee; /* Separator line */
+    border-bottom: 1px solid #3a3a3a; /* Dark separator line */
     margin-bottom: 30px;
 }
 
 .hero h1 {
     font-size: 2.2em; /* Larger hero title */
-    color: #333; /* Match main text color or a specific brand color */
+    color: #ffffff; /* White hero title */
     margin-bottom: 0.5em;
 }
 
@@ -72,7 +73,7 @@ main {
 section {
     margin-bottom: 25px;
     padding-bottom: 25px;
-    border-bottom: 1px solid #f0f0f0; /* Lighter separator for sections */
+    border-bottom: 1px solid #3a3a3a; /* Dark separator for sections */
 }
 
 section:last-child {
@@ -83,13 +84,13 @@ section:last-child {
 
 h2 {
     font-size: 1.8em;
-    color: #0056b3; /* Darker blue for H2 headings */
+    color: #79c0ff; /* light blue */
     margin-bottom: 0.75em;
 }
 
 h3 {
     font-size: 1.4em;
-    color: #333;
+    color: #e0e0e0; /* same as body text */
     margin-top: 1em;
     margin-bottom: 0.5em;
 }
@@ -122,14 +123,14 @@ img {
 footer {
     text-align: center;
     padding: 1.5em 0;
-    background-color: #333; /* Match header background */
-    color: white;
+    background-color: #1f1f1f; /* Darker gray footer background */
+    color: #e0e0e0;
     margin-top: 30px;
     font-size: 0.9em;
 }
 
 /* Accessibility: Focus outline for keyboard navigation */
 a:focus, button:focus {
-    outline: 2px solid #0056b3;
+    outline: 2px solid #79c0ff; /* Light blue focus outline */
     outline-offset: 2px;
 }
