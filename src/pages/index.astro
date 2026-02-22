@@ -1,0 +1,165 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import { getCollection } from 'astro:content';
+
+const insights = await getCollection('insights');
+const featuredInsights = insights
+  .sort((a, b) => b.data.date.valueOf() - a.data.date.valueOf())
+  .slice(0, 3);
+
+const pillars = [
+  {
+    icon: '🤖',
+    title: 'AI Agents & Agentic Architecture',
+    description: 'Deep dives into AI agent frameworks, multi-agent systems, and how agentic AI is transforming software development.',
+    color: 'from-blue-500/20 to-blue-600/10',
+    border: 'border-blue-500/30',
+    tag: 'ai',
+  },
+  {
+    icon: '☁️',
+    title: 'Cloud-Native Architecture',
+    description: 'Practical insights on Azure, GCP, multi-cloud strategies, and building scalable cloud-native systems.',
+    color: 'from-emerald-500/20 to-emerald-600/10',
+    border: 'border-emerald-500/30',
+    tag: 'cloud',
+  },
+  {
+    icon: '🔮',
+    title: 'The Future of Development',
+    description: 'Exploring how AI, automation, and new paradigms are reshaping what it means to build software.',
+    color: 'from-purple-500/20 to-purple-600/10',
+    border: 'border-purple-500/30',
+    tag: 'future',
+  },
+  {
+    icon: '🎯',
+    title: 'Engineering Leadership',
+    description: 'Lessons learned from 26+ years leading technical teams and driving digital transformation.',
+    color: 'from-orange-500/20 to-orange-600/10',
+    border: 'border-orange-500/30',
+    tag: 'leadership',
+  },
+];
+
+const stats = [
+  { value: '26+', label: 'Years Experience' },
+  { value: 'Multi-Cloud', label: 'Expert' },
+  { value: 'AI-Native', label: 'Advocate' },
+  { value: 'Thought', label: 'Leader' },
+];
+---
+<BaseLayout title="Home" description="Senior AI & Cloud Solution Architect - Insights on AI agents, cloud architecture, and the future of development.">
+  <!-- Hero -->
+  <section class="relative overflow-hidden">
+    <div class="hero-gradient absolute inset-0 opacity-50"></div>
+    <div class="relative max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-24 sm:py-32 lg:py-40">
+      <div class="text-center">
+        <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-blue-500/10 border border-blue-500/20 text-blue-400 text-sm font-medium mb-8">
+          <span class="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span>
+          Available for consulting & speaking
+        </div>
+        <h1 class="text-5xl sm:text-6xl lg:text-7xl font-extrabold text-white mb-6 leading-tight">
+          Hector Luciano
+        </h1>
+        <p class="text-xl sm:text-2xl text-blue-400 font-semibold mb-4">Senior AI & Cloud Solution Architect</p>
+        <p class="text-lg text-gray-400 max-w-2xl mx-auto mb-10 leading-relaxed">
+          Bridging the gap between cutting-edge AI capabilities and enterprise-scale cloud architecture. 
+          26+ years of turning complex technology into competitive advantage.
+        </p>
+        <div class="flex flex-col sm:flex-row gap-4 justify-center">
+          <a href="/insights" class="px-8 py-3 rounded-lg bg-gradient-to-r from-blue-500 to-blue-600 text-white font-semibold hover:from-blue-600 hover:to-blue-700 transition-all shadow-lg shadow-blue-500/25">
+            Read Insights
+          </a>
+          <a href="/about" class="px-8 py-3 rounded-lg border border-gray-700 text-gray-300 font-semibold hover:bg-gray-800 hover:text-white transition-all">
+            About Me
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Stats -->
+  <section class="border-y border-gray-800 bg-gray-900/30">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
+        {stats.map(stat => (
+          <div>
+            <div class="text-3xl font-bold text-white mb-1">{stat.value}</div>
+            <div class="text-gray-400 text-sm">{stat.label}</div>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- Content Pillars -->
+  <section class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-24">
+    <div class="text-center mb-16">
+      <h2 class="text-3xl sm:text-4xl font-bold text-white mb-4">Areas of Expertise</h2>
+      <p class="text-gray-400 max-w-2xl mx-auto">Focused insights across the domains shaping modern enterprise technology.</p>
+    </div>
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+      {pillars.map(pillar => (
+        <a href={`/insights?pillar=${pillar.tag}`} class={`group p-6 rounded-xl border ${pillar.border} bg-gradient-to-br ${pillar.color} hover:scale-105 transition-transform cursor-pointer`}>
+          <div class="text-4xl mb-4">{pillar.icon}</div>
+          <h3 class="text-white font-bold text-lg mb-3 leading-snug">{pillar.title}</h3>
+          <p class="text-gray-400 text-sm leading-relaxed">{pillar.description}</p>
+        </a>
+      ))}
+    </div>
+  </section>
+
+  <!-- Featured Insights -->
+  <section class="bg-gray-900/20 border-t border-gray-800">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-24">
+      <div class="flex items-center justify-between mb-16">
+        <div>
+          <h2 class="text-3xl sm:text-4xl font-bold text-white mb-4">Latest Insights</h2>
+          <p class="text-gray-400">Fresh perspectives on AI, cloud, and the future of tech.</p>
+        </div>
+        <a href="/insights" class="hidden sm:inline-flex items-center gap-2 text-blue-400 hover:text-blue-300 font-medium transition-colors">
+          View all <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
+        </a>
+      </div>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        {featuredInsights.map(post => {
+          const wordCount = post.body.split(/\s+/).length;
+          const readingTime = Math.ceil(wordCount / 200);
+          return (
+            <a href={`/insights/${post.slug}`} class="group p-6 rounded-xl border border-gray-800 hover:border-blue-500/50 bg-gray-900/30 hover:bg-gray-900/60 transition-all">
+              <div class="flex flex-wrap gap-2 mb-4">
+                {post.data.tags.slice(0, 2).map(tag => (
+                  <span class="px-2 py-0.5 rounded text-xs bg-blue-500/10 text-blue-400">{tag}</span>
+                ))}
+              </div>
+              <h3 class="text-white font-bold text-lg mb-3 group-hover:text-blue-400 transition-colors leading-snug">{post.data.title}</h3>
+              <p class="text-gray-400 text-sm leading-relaxed mb-4 line-clamp-3">{post.data.excerpt}</p>
+              <div class="flex items-center gap-3 text-xs text-gray-500">
+                <time datetime={post.data.date.toISOString()}>
+                  {post.data.date.toLocaleDateString('en-US', { year: 'numeric', month: 'short', day: 'numeric' })}
+                </time>
+                <span>·</span>
+                <span>{readingTime} min read</span>
+              </div>
+            </a>
+          );
+        })}
+      </div>
+      <div class="mt-8 text-center sm:hidden">
+        <a href="/insights" class="text-blue-400 hover:text-blue-300 font-medium">View all insights →</a>
+      </div>
+    </div>
+  </section>
+</BaseLayout>
+
+<style>
+  .hero-gradient {
+    background: radial-gradient(ellipse at 50% 50%, #1a1f3e 0%, #0a0f1e 100%);
+    animation: pulse-bg 8s ease-in-out infinite;
+  }
+  @keyframes pulse-bg {
+    0%, 100% { opacity: 0.4; }
+    50% { opacity: 0.7; }
+  }
+</style>
