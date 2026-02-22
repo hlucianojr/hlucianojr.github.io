@@ -1,79 +1,79 @@
 ---
-title: "Understanding Internal Developer Platforms"
+title: "Entendiendo las Plataformas Internas de Desarrollo"
 date: 2024-01-15
 author: "Hector Luciano"
-tags: ["IDP", "Platform Engineering", "DevOps", "Cloud Architecture"]
-excerpt: "Internal Developer Platforms are centralized environments that standardize development, operations, and deployment processes. Here's what every architect needs to know."
+tags: ["IDP", "Ingeniería de Plataformas", "DevOps", "Arquitectura en la Nube"]
+excerpt: "Las Plataformas Internas de Desarrollo son entornos centralizados que estandarizan los procesos de desarrollo, operaciones e implementación. Esto es lo que todo arquitecto necesita saber."
 pillar: "cloud"
 ---
 
-Internal Developer Platforms (IDP) are centralized environments that standardize development, operations, and deployment processes within an organization. They aim to streamline workflows and improve productivity by providing a cohesive preset of tools and governance.
+Las Plataformas Internas de Desarrollo (IDP) son entornos centralizados que estandarizan los procesos de desarrollo, operaciones e implementación dentro de una organización. Su objetivo es simplificar los flujos de trabajo y mejorar la productividad al proporcionar un conjunto coherente de herramientas y gobernanza.
 
-Most companies that have implemented DevOps are now having the need to implement some sort of IDP. This IDP can take the shape of overloaded CI/CD tools like Jenkins, GitHub, homegrown solutions and much more. However, it is clear that we need something better — Jenkins should just be your CI/CD machine and nothing more. GitHub is great for storing source code, running workflows and collaborating at a distributed level, but it is not your service catalog.
+La mayoría de las empresas que han implementado DevOps ahora necesitan implementar algún tipo de IDP. Este IDP puede tomar la forma de herramientas de CI/CD sobrecargadas como Jenkins, GitHub, soluciones desarrolladas internamente y mucho más. Sin embargo, está claro que necesitamos algo mejor — Jenkins debería ser únicamente tu máquina de CI/CD y nada más. GitHub es excelente para almacenar código fuente, ejecutar flujos de trabajo y colaborar de forma distribuida, pero no es tu catálogo de servicios.
 
-## 1. What is IDP?
+## 1. ¿Qué es un IDP?
 
-Let's explore what some of the industry leaders describe as an IDP.
+Exploremos lo que algunos líderes de la industria describen como un IDP.
 
-**Cloud Native Computing Foundation:** An internal developer platform (IDP) is a customized system created in-house or by a third party to improve efficiency for an organization's Dev and Ops teams. IDPs provide a central interface where developers can access all the tools and services they need for coding, building, testing, and deploying applications. They aim to remove friction during deployment by standardizing tools and best practices. At their core, IDPs enable engineers to build, test, integrate, and deploy applications faster and with higher quality.
+**Cloud Native Computing Foundation:** Una plataforma interna de desarrollo (IDP) es un sistema personalizado creado internamente o por un tercero para mejorar la eficiencia de los equipos de Dev y Ops de una organización. Los IDP proporcionan una interfaz central donde los desarrolladores pueden acceder a todas las herramientas y servicios que necesitan para codificar, construir, probar e implementar aplicaciones. Su objetivo es eliminar la fricción durante la implementación mediante la estandarización de herramientas y mejores prácticas. En su núcleo, los IDP permiten a los ingenieros construir, probar, integrar e implementar aplicaciones de forma más rápida y con mayor calidad.
 
-**Humanitec:** An Internal Developer Platform (IDP) is the sum of all the tech and tools that a platform engineering team binds together to pave golden paths for developers. IDPs lower cognitive load across the engineering organization and enable developer self-service, without abstracting away context from developers or making the underlying tech inaccessible. Well designed IDPs follow a Platform as a Product approach.
+**Humanitec:** Una Plataforma Interna de Desarrollo (IDP) es la suma de toda la tecnología y herramientas que un equipo de ingeniería de plataformas une para trazar caminos óptimos para los desarrolladores. Los IDP reducen la carga cognitiva en toda la organización de ingeniería y habilitan el autoservicio del desarrollador, sin abstraer el contexto de los desarrolladores ni hacer que la tecnología subyacente sea inaccesible. Los IDP bien diseñados siguen un enfoque de Plataforma como Producto.
 
-**Microsoft:** An internal developer platform is focused on a company's internal development practices. You define a set of recommended and supported development paths to production and incrementally "pave" a way through them with an internal platform. Paved paths within an internal developer platform have similar goals to real-world trails — as more people use them, they're paved to improve safety while maintaining velocity and throughput.
+**Microsoft:** Una plataforma interna de desarrollo se centra en las prácticas de desarrollo internas de una empresa. Defines un conjunto de rutas de desarrollo recomendadas y soportadas hacia producción y progresivamente "pavimentas" un camino a través de ellas con una plataforma interna. Los caminos pavimentados dentro de una plataforma interna de desarrollo tienen objetivos similares a los senderos del mundo real — a medida que más personas los usan, se pavimentan para mejorar la seguridad mientras se mantiene la velocidad y el rendimiento.
 
-**Cortex.io:** An Internal Developer Portal (IDP) is the engineering system of record for tracking, improving, and building high-quality software. From services and APIs to Kubernetes clusters and data pipelines — IDPs abstract away the complexities of ensuring software security, maturity, production readiness, and more.
+**Cortex.io:** Un Portal Interno de Desarrollo (IDP) es el sistema de registro de ingeniería para rastrear, mejorar y construir software de alta calidad. Desde servicios y APIs hasta clústeres de Kubernetes y pipelines de datos — los IDP abstraen las complejidades de garantizar la seguridad, madurez, preparación para producción y más del software.
 
-## 2. So What Does It Really Mean?
+## 2. ¿Qué Significa Realmente?
 
-**Hector Luciano:** An Internal Developer Platform is a self-service Product made of a set of Tools and Capabilities to empower developers to be self-sufficient and deliver their software efficiently, while enforcing organization standards in a simple way.
+**Hector Luciano:** Una Plataforma Interna de Desarrollo es un Producto de autoservicio compuesto por un conjunto de Herramientas y Capacidades para empoderar a los desarrolladores a ser autosuficientes y entregar su software de manera eficiente, mientras se aplican los estándares de la organización de forma sencilla.
 
-## What Problem Does IDP Solve?
+## ¿Qué Problema Resuelve el IDP?
 
-**Engineers Perspective:**
-- Reduce the cognitive load while improving productivity
-- Increase software quality and observability
-- Self Service: let me build at my speed and collaborate with others
+**Perspectiva del Ingeniero:**
+- Reducir la carga cognitiva mientras se mejora la productividad
+- Aumentar la calidad del software y la observabilidad
+- Autoservicio: déjame construir a mi velocidad y colaborar con otros
 
-**Business Perspective:**
-- Speed time to market in an increasingly competitive arena
-- Automation and enforcement of Governance, Security Policy
-- Catalog of Resources and ownership
+**Perspectiva del Negocio:**
+- Acelerar el tiempo de salida al mercado en un entorno cada vez más competitivo
+- Automatización y aplicación de Gobernanza y Política de Seguridad
+- Catálogo de Recursos y propiedad
 
-## 3. How Did We Get Here?
+## 3. ¿Cómo Llegamos Aquí?
 
-The evolution of development practices leading to the rise of IDPs mirrors the broader history of DevOps: from manual deployments and monolithic applications, through containerization and microservices, to the need for coordinated, standardized developer experiences at scale.
+La evolución de las prácticas de desarrollo que llevó al surgimiento de los IDP refleja la historia más amplia de DevOps: desde las implementaciones manuales y las aplicaciones monolíticas, pasando por la contenerización y los microservicios, hasta la necesidad de experiencias de desarrollo coordinadas y estandarizadas a escala.
 
-## IDP vs. Traditional Tools
+## IDP vs. Herramientas Tradicionales
 
-**Jenkins:** Jenkins excels as a CI/CD machine but shouldn't be overloaded with additional responsibilities. It's not a service catalog or an operations updater.
+**Jenkins:** Jenkins sobresale como una máquina de CI/CD pero no debería sobrecargarse con responsabilidades adicionales. No es un catálogo de servicios ni un actualizador de operaciones.
 
-**GitHub:** While GitHub is excellent for source code management and collaboration, it isn't a comprehensive service catalog. It lacks features like monitoring services and operational updates.
+**GitHub:** Si bien GitHub es excelente para la gestión del código fuente y la colaboración, no es un catálogo de servicios completo. Carece de características como la monitorización de servicios y las actualizaciones operacionales.
 
-## 4. How Does IDP Help Reduce Cognitive Load?
+## 4. ¿Cómo Ayuda el IDP a Reducir la Carga Cognitiva?
 
-IDPs simplify decision-making for developers. By providing a consistent set of tools and practices, they reduce cognitive load, allowing teams to focus on building quality software instead of configuring tooling and processes.
+Los IDP simplifican la toma de decisiones para los desarrolladores. Al proporcionar un conjunto consistente de herramientas y prácticas, reducen la carga cognitiva, permitiendo que los equipos se centren en construir software de calidad en lugar de configurar herramientas y procesos.
 
-## Why Do We Need IDPs?
+## ¿Por Qué Necesitamos los IDP?
 
-**DevOps Complexity:** As companies adopt DevOps practices, the tool landscape becomes fragmented. CI/CD tools like Jenkins, GitLab, or GitHub serve specific purposes but lack cohesion.
+**Complejidad de DevOps:** A medida que las empresas adoptan prácticas de DevOps, el panorama de herramientas se fragmenta. Las herramientas de CI/CD como Jenkins, GitLab o GitHub cumplen propósitos específicos pero carecen de cohesión.
 
-**Beyond Lipstick Solutions:** IDPs go beyond superficial fixes. Rather than applying "lipstick" to existing tools, they offer a holistic approach to software delivery.
+**Más Allá de las Soluciones Superficiales:** Los IDP van más allá de las soluciones superficiales. En lugar de aplicar "parches cosméticos" a las herramientas existentes, ofrecen un enfoque holístico para la entrega de software.
 
-## 5. What Are the Pros and Cons of IDP?
+## 5. ¿Cuáles son los Pros y Contras de un IDP?
 
 ### Pros:
-- Streamlined workflows
-- Improved collaboration
-- Reduced tool sprawl
-- Enhanced governance
+- Flujos de trabajo optimizados
+- Colaboración mejorada
+- Reducción de la proliferación de herramientas
+- Gobernanza mejorada
 
-### Cons:
-- Implementation challenges
-- Adoption across teams
-- Balancing customization and standardization
+### Contras:
+- Desafíos de implementación
+- Adopción entre equipos
+- Equilibrar la personalización y la estandarización
 
-## 6. Is Backstage.io an IDP?
+## 6. ¿Es Backstage.io un IDP?
 
-Backstage.io, an open-source project by Spotify, aims to be an IDP. It centralizes services, documentation, and workflows, making it a potential solution for managing the entire software lifecycle.
+Backstage.io, un proyecto de código abierto de Spotify, aspira a ser un IDP. Centraliza servicios, documentación y flujos de trabajo, convirtiéndolo en una solución potencial para gestionar todo el ciclo de vida del software.
 
-In summary, IDPs empower organizations to move beyond fragmented tools, fostering collaboration, efficiency, and better software delivery. 🚀
+En resumen, los IDP empoderan a las organizaciones para ir más allá de las herramientas fragmentadas, fomentando la colaboración, la eficiencia y una mejor entrega de software. 🚀

@@ -1,6 +1,8 @@
 # hlucianojr.github.io
 
-Welcome! This is my public site where I explore the realms of Internal Developer Platforms, Azure/Google Cloud Architecture, the Future of AI Agents, and Leadership. Together, we’ll delve into innovative solutions and technologies.
+> **Nota:** Este sitio está en español. / **Note:** This site is in Spanish.
+
+Bienvenido. Este es mi sitio público donde exploro el mundo de las Plataformas Internas de Desarrollo, la Arquitectura en Azure/Google Cloud, el Futuro de los Agentes de IA y el Liderazgo. Juntos, profundizaremos en soluciones y tecnologías innovadoras.
 
 ## About Me
 
