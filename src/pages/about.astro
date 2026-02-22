@@ -2,43 +2,43 @@
 import BaseLayout from '../layouts/BaseLayout.astro';
 
 const skills = [
-  { category: 'Cloud Platforms', items: ['Microsoft Azure', 'Google Cloud Platform', 'AWS', 'Multi-Cloud Architecture'] },
-  { category: 'AI & ML', items: ['Google ADK', 'LangChain', 'OpenAI APIs', 'Gemini', 'Multi-Agent Systems', 'RAG Architecture'] },
-  { category: 'API & Integration', items: ['Apigee X', 'REST APIs', 'GraphQL', 'Event-Driven Architecture', 'Microservices'] },
-  { category: 'Platform Engineering', items: ['Internal Developer Platforms', 'Backstage', 'GitOps', 'Platform-as-a-Product', 'DevEx'] },
+  { category: 'Plataformas en la Nube', items: ['Microsoft Azure', 'Google Cloud Platform', 'AWS', 'Arquitectura Multi-Nube'] },
+  { category: 'IA y ML', items: ['Google ADK', 'LangChain', 'OpenAI APIs', 'Gemini', 'Sistemas Multi-Agente', 'Arquitectura RAG'] },
+  { category: 'API e Integración', items: ['Apigee X', 'REST APIs', 'GraphQL', 'Arquitectura Orientada a Eventos', 'Microservicios'] },
+  { category: 'Ingeniería de Plataformas', items: ['Plataformas Internas de Desarrollo', 'Backstage', 'GitOps', 'Plataforma como Producto', 'DevEx'] },
 ];
 ---
-<BaseLayout title="About" description="Learn about Hector Luciano - Senior AI & Cloud Solution Architect with 26+ years of experience.">
+<BaseLayout title="Sobre Mí" description="Conoce a Hector Luciano - Arquitecto Senior de IA y Nube con más de 26 años de experiencia.">
   <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
     <!-- Hero -->
     <div class="text-center mb-16">
       <div class="w-24 h-24 rounded-full bg-gradient-to-br from-blue-500 to-emerald-500 flex items-center justify-center text-white font-bold text-3xl mx-auto mb-6">HL</div>
       <h1 class="text-4xl sm:text-5xl font-bold text-white mb-4">Hector Luciano</h1>
-      <p class="text-xl text-blue-400 font-semibold mb-4">Senior AI & Cloud Solution Architect</p>
+      <p class="text-xl text-blue-400 font-semibold mb-4">Arquitecto Senior de IA y Nube</p>
       <p class="text-gray-400 max-w-2xl mx-auto leading-relaxed">
-        With over 26 years in the technology industry, I've navigated every major wave of technological transformation — from the early internet to cloud computing, and now the agentic AI revolution.
+        Con más de 26 años en la industria tecnológica, he navegado cada gran ola de transformación tecnológica — desde los inicios de internet hasta la computación en la nube, y ahora la revolución de la IA agéntica.
       </p>
     </div>
 
     <!-- Bio -->
     <section class="mb-16 p-8 rounded-xl border border-gray-800 bg-gray-900/30">
-      <h2 class="text-2xl font-bold text-white mb-6">Professional Philosophy</h2>
+      <h2 class="text-2xl font-bold text-white mb-6">Filosofía Profesional</h2>
       <div class="space-y-4 text-gray-300 leading-relaxed">
         <p>
-          My work sits at the intersection of enterprise architecture and emerging technology. I specialize in helping organizations understand not just what new technologies can do, but <em>how</em> to strategically adopt them to create lasting competitive advantage.
+          Mi trabajo se encuentra en la intersección de la arquitectura empresarial y la tecnología emergente. Me especializo en ayudar a las organizaciones a entender no solo qué pueden hacer las nuevas tecnologías, sino <em>cómo</em> adoptarlas estratégicamente para crear una ventaja competitiva duradera.
         </p>
         <p>
-          Today, that means diving deep into AI agents, multi-agent systems, and agentic architectures. The shift from AI as a tool to AI as an autonomous collaborator represents the most significant transformation in software development since cloud computing — and I'm here to help teams navigate it.
+          Hoy en día, eso significa profundizar en agentes de IA, sistemas multi-agente y arquitecturas agénticas. El cambio de la IA como herramienta a la IA como colaborador autónomo representa la transformación más significativa en el desarrollo de software desde la computación en la nube — y estoy aquí para ayudar a los equipos a navegarlo.
         </p>
         <p>
-          Whether it's designing cloud-native systems on Azure or GCP, building internal developer platforms that improve developer experience, or architecting the next generation of AI-powered applications, I bring both the strategic vision and technical depth to make it happen.
+          Ya sea diseñando sistemas nativos en la nube en Azure o GCP, construyendo plataformas internas de desarrollo que mejoran la experiencia del desarrollador, o arquitectando la próxima generación de aplicaciones potenciadas por IA, aporto tanto la visión estratégica como la profundidad técnica para hacerlo realidad.
         </p>
       </div>
     </section>
 
     <!-- Skills -->
     <section class="mb-16">
-      <h2 class="text-2xl font-bold text-white mb-8">Technology Expertise</h2>
+      <h2 class="text-2xl font-bold text-white mb-8">Experiencia Tecnológica</h2>
       <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
         {skills.map(group => (
           <div class="p-6 rounded-xl border border-gray-800 bg-gray-900/30">
@@ -58,12 +58,12 @@ const skills = [
 
     <!-- CTA -->
     <section class="text-center p-8 rounded-xl border border-blue-500/20 bg-blue-500/5">
-      <h2 class="text-2xl font-bold text-white mb-4">Let's Connect</h2>
-      <p class="text-gray-400 mb-6">Available for consulting, speaking engagements, and strategic advisory roles.</p>
+      <h2 class="text-2xl font-bold text-white mb-4">Conectemos</h2>
+      <p class="text-gray-400 mb-6">Disponible para consultoría, conferencias y roles de asesoría estratégica.</p>
       <div class="flex flex-col sm:flex-row gap-4 justify-center">
         <a href="https://github.com/hlucianojr" target="_blank" rel="noopener noreferrer" class="px-6 py-3 rounded-lg bg-gray-800 text-white font-semibold hover:bg-gray-700 transition-colors">GitHub</a>
         <a href="https://linkedin.com/in/hlucianojr" target="_blank" rel="noopener noreferrer" class="px-6 py-3 rounded-lg bg-gradient-to-r from-blue-500 to-blue-600 text-white font-semibold hover:from-blue-600 hover:to-blue-700 transition-all">LinkedIn</a>
-        <a href="/contact" class="px-6 py-3 rounded-lg border border-gray-700 text-gray-300 font-semibold hover:bg-gray-800 transition-colors">Contact</a>
+        <a href="/contact" class="px-6 py-3 rounded-lg border border-gray-700 text-gray-300 font-semibold hover:bg-gray-800 transition-colors">Contacto</a>
       </div>
     </section>
   </div>

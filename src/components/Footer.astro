@@ -9,23 +9,23 @@ const year = new Date().getFullYear();
           <div class="w-10 h-10 rounded-lg bg-gradient-to-br from-blue-500 to-emerald-500 flex items-center justify-center text-white font-bold text-lg">HL</div>
           <span class="text-white font-semibold">Hector Luciano</span>
         </div>
-        <p class="text-gray-400 text-sm leading-relaxed">Senior AI & Cloud Solution Architect sharing insights on the future of technology.</p>
+        <p class="text-gray-400 text-sm leading-relaxed">Arquitecto Senior de IA y Nube compartiendo perspectivas sobre el futuro de la tecnología.</p>
       </div>
       <div>
-        <h3 class="text-white font-semibold mb-4">Navigation</h3>
+        <h3 class="text-white font-semibold mb-4">Navegación</h3>
         <ul class="space-y-2">
           {[
-            { href: '/', label: 'Home' },
-            { href: '/about', label: 'About' },
-            { href: '/insights', label: 'Insights' },
-            { href: '/contact', label: 'Contact' },
+            { href: '/', label: 'Inicio' },
+            { href: '/about', label: 'Sobre Mí' },
+            { href: '/insights', label: 'Perspectivas' },
+            { href: '/contact', label: 'Contacto' },
           ].map(link => (
             <li><a href={link.href} class="text-gray-400 hover:text-white text-sm transition-colors">{link.label}</a></li>
           ))}
         </ul>
       </div>
       <div>
-        <h3 class="text-white font-semibold mb-4">Connect</h3>
+        <h3 class="text-white font-semibold mb-4">Conectar</h3>
         <ul class="space-y-2">
           <li>
             <a href="https://github.com/hlucianojr" target="_blank" rel="noopener noreferrer" class="text-gray-400 hover:text-white text-sm transition-colors flex items-center gap-2">
@@ -49,7 +49,7 @@ const year = new Date().getFullYear();
       </div>
     </div>
     <div class="mt-8 pt-8 border-t border-gray-800 text-center text-gray-500 text-sm">
-      <p>© {year} Hector Luciano. All rights reserved.</p>
+      <p>© {year} Hector Luciano. Todos los derechos reservados.</p>
     </div>
   </div>
 </footer>

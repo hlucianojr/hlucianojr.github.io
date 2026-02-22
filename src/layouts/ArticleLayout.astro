@@ -14,7 +14,7 @@ interface Props {
 
 const { title, description, date, author, tags, readingTime, prevPost, nextPost } = Astro.props;
 
-const formattedDate = date.toLocaleDateString('en-US', {
+const formattedDate = date.toLocaleDateString('es-ES', {
   year: 'numeric',
   month: 'long',
   day: 'numeric',
@@ -40,7 +40,7 @@ const formattedDate = date.toLocaleDateString('en-US', {
         <span>·</span>
         <time datetime={date.toISOString()}>{formattedDate}</time>
         <span>·</span>
-        <span>{readingTime} min read</span>
+        <span>{readingTime} min de lectura</span>
       </div>
     </header>
 
@@ -64,13 +64,13 @@ const formattedDate = date.toLocaleDateString('en-US', {
     <nav class="mt-16 pt-8 border-t border-gray-800 grid grid-cols-1 sm:grid-cols-2 gap-6">
       {prevPost && (
         <a href={`/insights/${prevPost.slug}`} class="group p-4 rounded-lg border border-gray-800 hover:border-blue-500/50 transition-colors">
-          <div class="text-xs text-gray-500 mb-1">← Previous</div>
+          <div class="text-xs text-gray-500 mb-1">← Anterior</div>
           <div class="text-sm text-white group-hover:text-blue-400 transition-colors font-medium">{prevPost.title}</div>
         </a>
       )}
       {nextPost && (
         <a href={`/insights/${nextPost.slug}`} class="group p-4 rounded-lg border border-gray-800 hover:border-blue-500/50 transition-colors sm:text-right ml-auto w-full">
-          <div class="text-xs text-gray-500 mb-1">Next →</div>
+          <div class="text-xs text-gray-500 mb-1">Siguiente →</div>
           <div class="text-sm text-white group-hover:text-blue-400 transition-colors font-medium">{nextPost.title}</div>
         </a>
       )}
